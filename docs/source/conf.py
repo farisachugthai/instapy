@@ -12,6 +12,11 @@
 
 import os
 import sys
+
+# For the instapy docs
+from pygments.lexers.python import PythonLexer
+from pygments.lexers.erlang import ErlangLexer
+
 sys.path.insert(0, os.path.abspath('../..'))
 
 
@@ -64,3 +69,23 @@ html_theme = 'alabaster'
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+
+html_sidebars = {
+    "**": [
+        "searchbox.html",
+        "relations.html",
+        "localtoc.html",
+        "globaltoc.html",
+        "sourcelink.html",
+    ]
+}
+
+
+html_baseurl = "https://farisachugthai.github.io/instapy"
+
+
+def setup(app):
+    app.add_lexer("erlang", ErlangLexer)
+    app.add_lexer("python3", PythonLexer)
+    app.add_lexer("python", PythonLexer)
