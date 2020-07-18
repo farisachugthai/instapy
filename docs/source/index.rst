@@ -10,11 +10,11 @@ Welcome to Instapy's documentation!
    ../../README.rst
 
 
-.. .. toctree::
-..   :maxdepth: 2
-..   :caption: Contents:
+.. toctree::
+   :maxdepth: 3
+   :caption: Contents:
 
-..   ../../README.rst
+   instapy_docs.md
 
 
 Indices and tables
