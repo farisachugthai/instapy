@@ -138,3 +138,13 @@ The methods of a ``selenium.Firefox()`` object
 
 So by count that's like 130 methods. ``vars(browser)`` didn't give me a ton
 so apparently the magic is in the methods.
+
+API
+====
+
+.. literalinclude:: ../../instapy_01.py
+   :language: python
+   :linenos:
+
+.. automodule:: additional_features
+   :members:

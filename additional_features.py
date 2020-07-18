@@ -17,8 +17,8 @@ is super useful if you want to deploy your bot to a server where you may not
 have or need the graphical interface. It’s also less CPU intensive, so it
 improves performance. You can use it like so:
 
-Quota Supervisor
-================
+Quota Supervisor Intro
+======================
 You can’t scrape Instagram all day, every day. The service will quickly
 notice that you’re running a bot and will ban some of its actions. That’s why
 it’s a good idea to set quotas on some of your bot’s actions.
