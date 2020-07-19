@@ -73,8 +73,10 @@ html_static_path = ['_static']
 
 html_sidebars = {
     "**": [
-        "searchbox.html",
+        "about.html",
+        "navigation.html",
         "relations.html",
+        "searchbox.html",
         "localtoc.html",
         "globaltoc.html",
         "sourcelink.html",
