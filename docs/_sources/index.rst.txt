@@ -15,6 +15,7 @@ Welcome to Instapy's documentation!
    :caption: Contents:
 
    instapy_docs.md
+   twitter_api
 
 
 Indices and tables

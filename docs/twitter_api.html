@@ -1,0 +1,280 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter API &#8212; Instapy 2020 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="canonical" href="https://farisachugthai.github.io/instapy/twitter_api.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Documentation" href="instapy_docs.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="module-hello_world_tweepy">
+<span id="twitter-api"></span><h1>Twitter API<a class="headerlink" href="#module-hello_world_tweepy" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="methods-of-the-tweepy-api-object">
+<h2>Methods of the tweepy API object<a class="headerlink" href="#methods-of-the-tweepy-api-object" title="Permalink to this headline">¶</a></h2>
+<p>There are a very numerous number of API methods.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pprint</span>
+<span class="kn">from</span> <span class="nn">hello_world_tweepy</span> <span class="kn">import</span> <span class="n">api</span>
+
+<span class="n">pprint</span><span class="o">.</span><span class="n">pp</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">api</span><span class="p">))</span>
+<span class="p">[</span><span class="s1">&#39;__class__&#39;</span><span class="p">,</span>
+<span class="s1">&#39;__delattr__&#39;</span><span class="p">,</span>
+<span class="s1">&#39;__dict__&#39;</span><span class="p">,</span>
+<span class="s1">&#39;__dir__&#39;</span><span class="p">,</span>
+<span class="s1">&#39;__doc__&#39;</span><span class="p">,</span>
+<span class="s1">&#39;__eq__&#39;</span><span class="p">,</span>
+<span class="s1">&#39;__format__&#39;</span><span class="p">,</span>
+<span class="s1">&#39;__ge__&#39;</span><span class="p">,</span>
+<span class="s1">&#39;__getattribute__&#39;</span><span class="p">,</span>
+<span class="s1">&#39;__gt__&#39;</span><span class="p">,</span>
+<span class="s1">&#39;__hash__&#39;</span><span class="p">,</span>
+<span class="s1">&#39;__init__&#39;</span><span class="p">,</span>
+<span class="s1">&#39;__init_subclass__&#39;</span><span class="p">,</span>
+<span class="s1">&#39;__le__&#39;</span><span class="p">,</span>
+<span class="s1">&#39;__lt__&#39;</span><span class="p">,</span>
+<span class="s1">&#39;__module__&#39;</span><span class="p">,</span>
+<span class="s1">&#39;__ne__&#39;</span><span class="p">,</span>
+<span class="s1">&#39;__new__&#39;</span><span class="p">,</span>
+<span class="s1">&#39;__reduce__&#39;</span><span class="p">,</span>
+<span class="s1">&#39;__reduce_ex__&#39;</span><span class="p">,</span>
+<span class="s1">&#39;__repr__&#39;</span><span class="p">,</span>
+<span class="s1">&#39;__setattr__&#39;</span><span class="p">,</span>
+<span class="s1">&#39;__sizeof__&#39;</span><span class="p">,</span>
+<span class="s1">&#39;__str__&#39;</span><span class="p">,</span>
+<span class="s1">&#39;__subclasshook__&#39;</span><span class="p">,</span>
+<span class="s1">&#39;__weakref__&#39;</span><span class="p">,</span>
+<span class="s1">&#39;_add_list_members&#39;</span><span class="p">,</span>
+<span class="s1">&#39;_lookup_friendships&#39;</span><span class="p">,</span>
+<span class="s1">&#39;_pack_image&#39;</span><span class="p">,</span>
+<span class="s1">&#39;_remove_list_members&#39;</span><span class="p">,</span>
+<span class="s1">&#39;_send_direct_message&#39;</span><span class="p">,</span>
+<span class="s1">&#39;add_list_member&#39;</span><span class="p">,</span>
+<span class="s1">&#39;add_list_members&#39;</span><span class="p">,</span>
+<span class="s1">&#39;api_root&#39;</span><span class="p">,</span>
+<span class="s1">&#39;auth&#39;</span><span class="p">,</span>
+<span class="s1">&#39;blocks&#39;</span><span class="p">,</span>
+<span class="s1">&#39;blocks_ids&#39;</span><span class="p">,</span>
+<span class="s1">&#39;cache&#39;</span><span class="p">,</span>
+<span class="s1">&#39;compression&#39;</span><span class="p">,</span>
+<span class="s1">&#39;configuration&#39;</span><span class="p">,</span>
+<span class="s1">&#39;create_block&#39;</span><span class="p">,</span>
+<span class="s1">&#39;create_favorite&#39;</span><span class="p">,</span>
+<span class="s1">&#39;create_friendship&#39;</span><span class="p">,</span>
+<span class="s1">&#39;create_list&#39;</span><span class="p">,</span>
+<span class="s1">&#39;create_media_metadata&#39;</span><span class="p">,</span>
+<span class="s1">&#39;create_mute&#39;</span><span class="p">,</span>
+<span class="s1">&#39;create_saved_search&#39;</span><span class="p">,</span>
+<span class="s1">&#39;destroy_block&#39;</span><span class="p">,</span>
+<span class="s1">&#39;destroy_direct_message&#39;</span><span class="p">,</span>
+<span class="s1">&#39;destroy_favorite&#39;</span><span class="p">,</span>
+<span class="s1">&#39;destroy_friendship&#39;</span><span class="p">,</span>
+<span class="s1">&#39;destroy_list&#39;</span><span class="p">,</span>
+<span class="s1">&#39;destroy_mute&#39;</span><span class="p">,</span>
+<span class="s1">&#39;destroy_saved_search&#39;</span><span class="p">,</span>
+<span class="s1">&#39;destroy_status&#39;</span><span class="p">,</span>
+<span class="s1">&#39;favorites&#39;</span><span class="p">,</span>
+<span class="s1">&#39;followers&#39;</span><span class="p">,</span>
+<span class="s1">&#39;followers_ids&#39;</span><span class="p">,</span>
+<span class="s1">&#39;friends&#39;</span><span class="p">,</span>
+<span class="s1">&#39;friends_ids&#39;</span><span class="p">,</span>
+<span class="s1">&#39;friendships_incoming&#39;</span><span class="p">,</span>
+<span class="s1">&#39;friendships_outgoing&#39;</span><span class="p">,</span>
+<span class="s1">&#39;geo_id&#39;</span><span class="p">,</span>
+<span class="s1">&#39;geo_search&#39;</span><span class="p">,</span>
+<span class="s1">&#39;geo_similar_places&#39;</span><span class="p">,</span>
+<span class="s1">&#39;get_direct_message&#39;</span><span class="p">,</span>
+<span class="s1">&#39;get_list&#39;</span><span class="p">,</span>
+<span class="s1">&#39;get_oembed&#39;</span><span class="p">,</span>
+<span class="s1">&#39;get_saved_search&#39;</span><span class="p">,</span>
+<span class="s1">&#39;get_settings&#39;</span><span class="p">,</span>
+<span class="s1">&#39;get_status&#39;</span><span class="p">,</span>
+<span class="s1">&#39;get_user&#39;</span><span class="p">,</span>
+<span class="s1">&#39;home_timeline&#39;</span><span class="p">,</span>
+<span class="s1">&#39;host&#39;</span><span class="p">,</span>
+<span class="s1">&#39;list_direct_messages&#39;</span><span class="p">,</span>
+<span class="s1">&#39;list_members&#39;</span><span class="p">,</span>
+<span class="s1">&#39;list_subscribers&#39;</span><span class="p">,</span>
+<span class="s1">&#39;list_timeline&#39;</span><span class="p">,</span>
+<span class="s1">&#39;lists_all&#39;</span><span class="p">,</span>
+<span class="s1">&#39;lists_memberships&#39;</span><span class="p">,</span>
+<span class="s1">&#39;lists_subscriptions&#39;</span><span class="p">,</span>
+<span class="s1">&#39;lookup_friendships&#39;</span><span class="p">,</span>
+<span class="s1">&#39;lookup_users&#39;</span><span class="p">,</span>
+<span class="s1">&#39;me&#39;</span><span class="p">,</span>
+<span class="s1">&#39;media_upload&#39;</span><span class="p">,</span>
+<span class="s1">&#39;mentions_timeline&#39;</span><span class="p">,</span>
+<span class="s1">&#39;mutes&#39;</span><span class="p">,</span>
+<span class="s1">&#39;mutes_ids&#39;</span><span class="p">,</span>
+<span class="s1">&#39;parser&#39;</span><span class="p">,</span>
+<span class="s1">&#39;proxy&#39;</span><span class="p">,</span>
+<span class="s1">&#39;rate_limit_status&#39;</span><span class="p">,</span>
+<span class="s1">&#39;related_results&#39;</span><span class="p">,</span>
+<span class="s1">&#39;remove_list_member&#39;</span><span class="p">,</span>
+<span class="s1">&#39;remove_list_members&#39;</span><span class="p">,</span>
+<span class="s1">&#39;report_spam&#39;</span><span class="p">,</span>
+<span class="s1">&#39;retry_count&#39;</span><span class="p">,</span>
+<span class="s1">&#39;retry_delay&#39;</span><span class="p">,</span>
+<span class="s1">&#39;retry_errors&#39;</span><span class="p">,</span>
+<span class="s1">&#39;retweet&#39;</span><span class="p">,</span>
+<span class="s1">&#39;retweeters&#39;</span><span class="p">,</span>
+<span class="s1">&#39;retweets&#39;</span><span class="p">,</span>
+<span class="s1">&#39;retweets_of_me&#39;</span><span class="p">,</span>
+<span class="s1">&#39;reverse_geocode&#39;</span><span class="p">,</span>
+<span class="s1">&#39;saved_searches&#39;</span><span class="p">,</span>
+<span class="s1">&#39;search&#39;</span><span class="p">,</span>
+<span class="s1">&#39;search_host&#39;</span><span class="p">,</span>
+<span class="s1">&#39;search_root&#39;</span><span class="p">,</span>
+<span class="s1">&#39;search_users&#39;</span><span class="p">,</span>
+<span class="s1">&#39;send_direct_message&#39;</span><span class="p">,</span>
+<span class="s1">&#39;set_settings&#39;</span><span class="p">,</span>
+<span class="s1">&#39;show_friendship&#39;</span><span class="p">,</span>
+<span class="s1">&#39;show_list_member&#39;</span><span class="p">,</span>
+<span class="s1">&#39;show_list_subscriber&#39;</span><span class="p">,</span>
+<span class="s1">&#39;statuses_lookup&#39;</span><span class="p">,</span>
+<span class="s1">&#39;subscribe_list&#39;</span><span class="p">,</span>
+<span class="s1">&#39;supported_languages&#39;</span><span class="p">,</span>
+<span class="s1">&#39;timeout&#39;</span><span class="p">,</span>
+<span class="s1">&#39;trends_available&#39;</span><span class="p">,</span>
+<span class="s1">&#39;trends_closest&#39;</span><span class="p">,</span>
+<span class="s1">&#39;trends_place&#39;</span><span class="p">,</span>
+<span class="s1">&#39;unretweet&#39;</span><span class="p">,</span>
+<span class="s1">&#39;unsubscribe_list&#39;</span><span class="p">,</span>
+<span class="s1">&#39;update_list&#39;</span><span class="p">,</span>
+<span class="s1">&#39;update_profile&#39;</span><span class="p">,</span>
+<span class="s1">&#39;update_profile_background_image&#39;</span><span class="p">,</span>
+<span class="s1">&#39;update_profile_banner&#39;</span><span class="p">,</span>
+<span class="s1">&#39;update_profile_image&#39;</span><span class="p">,</span>
+<span class="s1">&#39;update_status&#39;</span><span class="p">,</span>
+<span class="s1">&#39;update_with_media&#39;</span><span class="p">,</span>
+<span class="s1">&#39;upload_host&#39;</span><span class="p">,</span>
+<span class="s1">&#39;upload_root&#39;</span><span class="p">,</span>
+<span class="s1">&#39;user_timeline&#39;</span><span class="p">,</span>
+<span class="s1">&#39;verify_credentials&#39;</span><span class="p">,</span>
+<span class="s1">&#39;wait_on_rate_limit&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="api">
+<h2>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Instapy</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="instapy_docs.html">Documentation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Twitter API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#methods-of-the-tweepy-api-object">Methods of the tweepy API object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#api">API</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="instapy_docs.html" title="previous chapter">Documentation</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Twitter API</a><ul>
+<li><a class="reference internal" href="#methods-of-the-tweepy-api-object">Methods of the tweepy API object</a></li>
+<li><a class="reference internal" href="#api">API</a></li>
+</ul>
+</li>
+</ul>
+
+<h3><a href="index.html">Table of Contents</a></h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="instapy_docs.html">Documentation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Twitter API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#methods-of-the-tweepy-api-object">Methods of the tweepy API object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#api">API</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/twitter_api.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Faris Chugthai.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/twitter_api.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
