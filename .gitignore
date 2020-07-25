@@ -1,4 +1,5 @@
 # gitignore
+.idea
 geckodriver.log
 tags
 tags.temp
@@ -7,3 +8,6 @@ tags.lock
 instapy_00.py
 docs/build
 __pycache__
+
+# twitter credentials
+credentials.py
