@@ -15,7 +15,8 @@ import sys
 
 # For the instapy docs
 from pygments.lexers.python import PythonLexer
-from pygments.lexers.erlang import ErlangLexer
+from pygments.lexers.shell import BashLexer
+from pygments.lexers.shell import BatchLexer
 
 sys.path.insert(0, os.path.abspath('../..'))
 
@@ -88,6 +89,7 @@ html_baseurl = "https://farisachugthai.github.io/instapy"
 
 
 def setup(app):
-    app.add_lexer("erlang", ErlangLexer)
+    app.add_lexer("dosbatch", BatchLexer)
     app.add_lexer("python3", PythonLexer)
     app.add_lexer("python", PythonLexer)
+    app.add_lexer("bash", BashLexer)

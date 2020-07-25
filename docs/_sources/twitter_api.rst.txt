@@ -2,8 +2,7 @@
 Twitter API
 ===========
 
-.. module:: hello_world_tweepy
-   :synopsis: Begin interacting with the twitter API.
+.. currentmodule:: hello_world_tweepy
 
 Methods of the tweepy API object
 ================================
@@ -157,6 +156,7 @@ API
 ====
 
 .. automodule:: hello_world_tweepy
+   :synopsis: Begin interacting with the twitter API.
    :members:
    :undoc-members:
    :show-inheritance:

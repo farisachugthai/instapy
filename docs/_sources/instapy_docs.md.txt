@@ -1,4 +1,4 @@
-# Documentation
+# InstaPy Docs
 
 **InstaPy is being sponsored by the following partner. Please help to support us by taking a look and signing up to a free trial 😊**
 <a href="https://tracking.gitads.io/?repo=InstaPy"> <img src="https://images.gitads.io/InstaPy" alt="GitAds"/> </a>
@@ -2324,8 +2324,11 @@ while True:
 For example, there is a **bug** and its **fix** is _merged to the repo_ but a newer version of _InstaPy_ [_containing_ that **fix**] is not yet released to _PyPI_ to be able to be _installed_ or _updated_ by **pip**.
 
 Then, you can do this to install the **actual state** of the _repo_ 😋
-```erlang
+
+```bash
+
 pip install -I https://github.com/timgrossmann/InstaPy/zipball/master
+
 ```
 
 Worths to note that, this installation option does not require _Git_ to be installed, too.
@@ -2357,17 +2360,21 @@ That's why you will be able to install the actual state of the repo using the `-
 ###### For those who want to tweak or enhance _InstaPy_.
 
 **1**. Clone _InstaPy_ repository into your computer
-```erlang
+
+```bash
+
 git clone https://github.com/timgrossmann/InstaPy.git
+
 ```
 
 **2**. Navigate to the _InstaPy_ project root directory
-```erlang
+
+```bash
 cd InstaPy
 ```
 
 **3**. Install the _local_ **instapy** package
-```erlang
+```bash
 pip install -e .
 ```
 <details>
@@ -2385,7 +2392,7 @@ But fortunately, `-e` flag comes to help;
 </details>
 or
 
-```erlang
+```bash
 python setup.py install
 ```
 
@@ -2405,27 +2412,27 @@ python setup.py install
 ##### Mac/Linux
 
 **1**. Clone _InstaPy_ repository into your computer
-```erlang
+```bash
 git clone https://github.com/timgrossmann/InstaPy.git
 ```
 
 **2**. Navigate to the _InstaPy_ project root directory
-```erlang
+```bash
 cd InstaPy
 ```
 
 **3**. Make a virtual environment
-```erlang
+```bash
 python3 -m venv venv
 ```
 
 **4**. Activate the virtual environment
-```erlang
+```bash
 source venv/bin/activate
 ```
 
 **5**. Install the _local_ **instapy** package
-```erlang
+```bash
 pip install -e .
 ```
 
@@ -2434,27 +2441,27 @@ pip install -e .
 ##### Windows
 
 **1**. Clone _InstaPy_ repository into your computer
-```erlang
+```dosbatch
 git clone https://github.com/timgrossmann/InstaPy.git
 ```
 
 **2**. Navigate to the _InstaPy_ project root directory
-```erlang
+```dosbatch
 cd InstaPy
 ```
 
 **3**. Make a virtual environment
-```erlang
+```dosbatch
 python3 -m venv venv
 ```
 
 **4**. Activate the virtual environment
-```erlang
+```dosbatch
 venv\Scripts\activate.bat
 ```
 
 **5**. Install the _local_ **instapy** package
-```erlang
+```dosbatch
 pip install -e .
 ```
 
@@ -2478,17 +2485,17 @@ If you're not _familiar_ with **venv**, please [read about it here](https://docs
   </summary>
 
 **1**. Make a virtual environment
-```erlang
+```dosbatch
 virtualenv venv
 ```
 
 **2**. Activate the virtual environment
-```erlang
+```dosbatch
 source venv/bin/activate
 ```
 
 **3**. Install the **instapy** package from _Git_ by using **pip**
-```erlang
+```dosbatch
 pip install git+https://github.com/timgrossmann/InstaPy.git
 ```
 
@@ -2690,7 +2697,7 @@ E.g., let's assume you have,
 session = InstaPy(username="abc")
 ```
 and you start that **quickstart** script as,
-```erlang
+```dosbatch
 python quickstart.py -u abcdef -p 12345678
 ```
 Then, your _username_ will be set as `abcdef` rather than `abc`.
@@ -2725,7 +2732,7 @@ _And obviously, if you don't pass the flag, it'll try to get that argument from 
    - Bypasses with mobile phone.
 
 To get the list of available commands, you can type,
-```erlang
+```dosbatch
 python quickstart.py -h
 # or
 python quickstart.py --help
@@ -2733,7 +2740,7 @@ python quickstart.py --help
 
 #### Examples
 ⚽ Let's quickly set your username and password right by CLI,
-```erlang
+```dosbatch
 python quickstart.py -u Toto.Lin8  -p 4X27_Tibor
 # or
 python quickstart.py --username Toto.Lin8  --password 4X27_Tibor
@@ -2771,7 +2778,7 @@ with open(filename, 'r') as f:
     my_data = f.read()
 ```
 After adding your custom arguments to the **quickstart** script, you can now **pass** them by CLI, comfortably,
-```erlang
+```dosbatch
 python quickstart.py --my-data-files-name "C:\\Users\\Anita\\Desktop\\data_file.txt"
 ```
 >**NOTE**:
@@ -2794,7 +2801,7 @@ username = cli_args.username
 print(username)
 ```
 👆🏼👉🏼 as you will pass the _username_ like,
-```erlang
+```dosbatch
 python quickstart.py -u abc
 ```
 
